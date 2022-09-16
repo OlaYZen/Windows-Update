@@ -1,8 +1,8 @@
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 
-#$source = 'https://raw.githubusercontent.com/OlaYZen/Windows-Update/main/winget-export.json'
-#$destination = '$PSScriptRoot"".\winget-export.json'
-#Invoke-WebRequest -Uri $source -OutFile $destination
+Start-Sleep -Seconds 2
+
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/OlaYZen/Windows-Update/main/winget-export.json -OutFile $PSScriptRoot"".\winget-export.json
 
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") 
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
