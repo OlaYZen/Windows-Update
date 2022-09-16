@@ -120,7 +120,7 @@ $button4.Location = '122, 60'
 $button4.Name = "Edit Winget Software"
 $button4.Size = '95, 35'
 $button4.TabIndex = 2
-$button4.Text = "Edit Wiget Software"
+$button4.Text = "Edit Winget Software"
 $button4.Add_Click({EditWinget})
 
 $checkBox = new-object System.Windows.Forms.checkbox
