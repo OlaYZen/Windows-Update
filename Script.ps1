@@ -64,7 +64,7 @@ function CheckBoxFunc2 {
 
 function GetWindowsUpdates {   
     (
-        Get-WindowsUpdate -AcceptAll -WindowsUpdate -ForceDownload
+        Get-WindowsUpdate -WindowsUpdate -ForceDownload -AutoSelectOnWebSites -BrowseOnly -AcceptAll
     )
     $button1.Visible = $false
     $button8.Visible = $false
@@ -72,7 +72,7 @@ function GetWindowsUpdates {
 
 function GetWindowsUpdates2 {   
     (
-        Get-WindowsUpdate -AcceptAll -MicrosoftUpdate -ForceDownload
+        Get-WindowsUpdate -MicrosoftUpdate -ForceDownload -AutoSelectOnWebSites -BrowseOnly  -AcceptAll 
     )
     $button1.Visible = $false
     $button8.Visible = $false
