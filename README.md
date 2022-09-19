@@ -5,5 +5,8 @@ Open a [Elevated Windows Powershell Window](https://docs.microsoft.com/en-us/pow
 iwr -useb https://tinyurl.com/OlaYZenWinUpdates | iex
 ```
 or Download and run Script.ps1
+
+## Preview Builds
+To try or compare Preview links click [here](https://github.com/OlaYZen/Windows-Update/tree/Preview)
 ## **Credits**
 Me and only me :(
