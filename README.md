@@ -7,6 +7,9 @@ iwr -useb https://tinyurl.com/OlaYZenWinUpdates | iex
 ```
 or Download and run Script.ps1
 
+## **Current Status of the code**
+[![CI](https://github.com/OlaYZen/Windows-Update/actions/workflows/blank.yml/badge.svg)](https://github.com/OlaYZen/Windows-Update/actions/workflows/blank.yml)
+
 ## Preview Builds
 To try or compare preview builds click [here](https://github.com/OlaYZen/Windows-Update/tree/Preview)
 ## **Credits**
