@@ -17,7 +17,7 @@ To try or compare preview builds click [here](https://github.com/OlaYZen/Windows
 Check out the [Wiki](https://github.com/OlaYZen/Windows-Update/wiki), There could be some info you want to know
 
 # **NEW UI**
-New UI in development, We expect the new UI will be in the new [Preview](https://github.com/OlaYZen/Windows-Update/blob/Preview/Script%20PREVIEW.ps1) Build comming out later this week. We will also try to not make it look like a program from the 1990's and try to get more of a modern feeling of the UI. Just like basically every program using Windows 11
+New UI in development, We expect the new UI will be in the new [Preview](https://github.com/OlaYZen/Windows-Update/blob/Preview/Script%20PREVIEW.ps1) Build comming out later this week. [easiexd](https://github.com/easiexd) is currently in works to make a new ui. We will also try to not make it look like a program from the 1990's and try to get more of a modern feeling of the UI. Just like basically every program using Windows 11
 
 # **More Features**
 With the new UI you can also expect more features
