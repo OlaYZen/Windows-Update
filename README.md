@@ -1,8 +1,9 @@
+# Windows Updater
 ![GitHub](https://img.shields.io/github/license/OlaYZen/Windows-Update?style=for-the-badge)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/OlaYZen/Windows-Update?style=for-the-badge)
 
 [<img src="https://raw.githubusercontent.com/OlaYZen/Windows-Update/main/Image.png"/>](https://raw.githubusercontent.com/OlaYZen/Windows-Update/main/Script.ps1)
-# **How to start the program**
+## **How to start the program**
 
 Open a [Elevated Windows Powershell Window](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/starting-windows-powershell?view=powershell-7.2#with-administrative-privileges-run-as-administrator), and type: 
 ```
