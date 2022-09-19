@@ -2,7 +2,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 
 Start-Sleep -Seconds 2
 
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/OlaYZen/Windows-Update/main/winget-export.json -OutFile $PSScriptRoot"".\winget-export.json
+
 
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") 
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
@@ -15,8 +15,19 @@ else {
     Write-Host "PSWindowsUpdate does not exist, Installing ..."
     Install-Module PSWindowsUpdate -force
 }
-
-
+function installwingetjson 
+{
+    (
+    Invoke-WebRequest -Uri https://raw.githubusercontent.com/OlaYZen/Windows-Update/main/winget-export.json -OutFile $PSScriptRoot"".\winget-export.json    
+    )
+    If (Test-Path -Path $PSScriptRoot"".\winget-export.json ) {
+        $button7.Visible = $false
+    }
+    else
+    {
+        $button7.Visible = $true
+    }
+}
 function CheckBoxFunc {
     if ($checkBox.Checked)
         {
@@ -119,6 +130,15 @@ $button3.Text = "Upgrade Winget software"
 $button3.Add_Click({WingetUpgrade})
 
 [System.Windows.Forms.Application]::EnableVisualStyles()
+$button7 = New-Object System.Windows.Forms.Button
+$button7.Location = '122, 60'
+$button7.Name = "Install Winget Json"
+$button7.Size = '95, 35'
+$button7.TabIndex = 2
+$button7.Text = "Install Winget Json"
+$button7.Add_Click({installwingetjson})
+
+[System.Windows.Forms.Application]::EnableVisualStyles()
 $button4 = New-Object System.Windows.Forms.Button
 $button4.Location = '122, 60'
 $button4.Name = "Edit Winget Software"
@@ -145,7 +165,7 @@ $AutoReboot.BackColor = "White"
 $VersionLabel = New-Object System.Windows.Forms.Label
 $VersionLabel.Location = '266, 90' 
 $VersionLabel.Name = 'Versionlabel'
-$VersionLabel.Text = "Version 1.2.1"
+$VersionLabel.Text = "Version 1.2.2"
 $VersionLabel.Size = '490, 500'
 
 $Form = New-Object System.Windows.Forms.Form
@@ -158,6 +178,7 @@ $Form.ShowInTaskbar = $true
 $Form.Controls.Add($button1)
 $Form.Controls.Add($button2)
 $Form.Controls.Add($button3)
+$Form.Controls.Add($button7)
 $Form.Controls.Add($button4)
 $Form.Controls.Add($button5)
 $Form.Controls.Add($button6)
@@ -174,6 +195,14 @@ $Form.Icon       = [System.Drawing.Icon]::FromHandle(([System.Drawing.Bitmap]::n
 $Form.Add_Shown({$Form.Activate()})
 $Form.Size = '352, 142'
 $Form.Topmost = $false 
+
+If (Test-Path -Path $PSScriptRoot"".\winget-export.json ) {
+    $button7.Visible = $false
+}
+else
+{
+    $button7.Visible = $true
+}
 
 
 [void]$Form.ShowDialog()
