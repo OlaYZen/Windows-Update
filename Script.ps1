@@ -72,7 +72,7 @@ function GetWindowsUpdates {
 
 function GetWindowsUpdates2 {   
     (
-        Get-WindowsUpdate -MicrosoftUpdate -ForceDownload -AutoSelectOnWebSites -BrowseOnly  -AcceptAll 
+        Get-WindowsUpdate -MicrosoftUpdate -ForceDownload -AutoSelectOnWebSites -BrowseOnly -AcceptAll -IsHidden -Confirm
     )
     $button1.Visible = $false
     $button8.Visible = $false
