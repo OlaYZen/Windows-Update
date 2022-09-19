@@ -8,7 +8,7 @@ iwr -useb https://tinyurl.com/OlaYZenWinUpdates | iex
 or Download and run Script.ps1
 
 ## **Current Status of the code**
-[![CI](https://github.com/OlaYZen/Windows-Update/actions/workflows/blank.yml/badge.svg)](https://github.com/OlaYZen/Windows-Update/actions/workflows/blank.yml) [![PSScriptAnalyzer](https://github.com/OlaYZen/Windows-Update/actions/workflows/powershell.yml/badge.svg)](https://github.com/OlaYZen/Windows-Update/actions/workflows/powershell.yml)
+[![CI](https://github.com/OlaYZen/Windows-Update/actions/workflows/blank.yml/badge.svg)](https://github.com/OlaYZen/Windows-Update/actions/workflows/blank.yml) [![PSScriptAnalyzer](https://github.com/OlaYZen/Windows-Update/actions/workflows/powershell.yml/badge.svg)](https://github.com/OlaYZen/Windows-Update/actions/workflows/powershell.yml) [![DevSkim](https://github.com/OlaYZen/Windows-Update/actions/workflows/devskim.yml/badge.svg)](https://github.com/OlaYZen/Windows-Update/actions/workflows/devskim.yml)
 
 ## Preview Builds
 To try or compare preview builds click [here](https://github.com/OlaYZen/Windows-Update/tree/Preview)
