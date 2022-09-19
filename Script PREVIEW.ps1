@@ -6,10 +6,16 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 
 if (Get-Module -ListAvailable -Name PSWindowsUpdate) {
     Write-Host "PSWindowsUpdate exists"
+    if (Get-Module -ListAvailable -Name PSWindowsUpdate) {
+        Import-Module PSWindowsUpdate
+    } 
 } 
 else {
     Write-Host "PSWindowsUpdate does not exist, Installing ..."
     Install-Module PSWindowsUpdate -force
+    if (Get-Module -ListAvailable -Name PSWindowsUpdate) {
+        Import-Module PSWindowsUpdate
+    } 
 }
 function installwingetjson 
 {
