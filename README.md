@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/OlaYZen/Windows-Update/Preview/Image.png"/>
+[<img src="https://raw.githubusercontent.com/OlaYZen/Windows-Update/Preview/Image.png"/>](https://raw.githubusercontent.com/OlaYZen/Windows-Update/Preview/Script%20PREVIEW.ps1)
 
 # PREVIEW BUILDS
 These can crash, and may be unstable
