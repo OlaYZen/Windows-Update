@@ -106,6 +106,13 @@ function WingetUpgrade {
     
 }
 
+function WinUpdates {
+    (
+        Start-Process ms-settings:windowsupdate
+    )
+    
+}
+
 function EditWinget {
     (
         notepad.exe $PSScriptRoot"".\winget-export.json
@@ -170,6 +177,15 @@ $button3.Text = "Upgrade Winget software"
 $button3.Add_Click({WingetUpgrade})
 
 [System.Windows.Forms.Application]::EnableVisualStyles()
+$button9 = New-Object System.Windows.Forms.Button
+$button9.Location = '232, 60'
+$button9.Name = "Open WU"
+$button9.Size = '95, 25'
+$button9.TabIndex = 2
+$button9.Text = "Open WU"
+$button9.Add_Click({WinUpdates})
+
+[System.Windows.Forms.Application]::EnableVisualStyles()
 $button7 = New-Object System.Windows.Forms.Button
 $button7.Location = '122, 5'
 $button7.Name = "Install Winget Json"
@@ -219,7 +235,7 @@ $VersionLabel.Location = '266, 90'
 #Preview Label
 
 $VersionLabel.Name = 'Versionlabel'
-$VersionLabel.Text = "Version 1.2.4"
+$VersionLabel.Text = "Version 1.2.5"
 $VersionLabel.Size = '490, 500'
 
 $Form = New-Object System.Windows.Forms.Form
@@ -237,6 +253,7 @@ $Form.Controls.Add($button7)
 $Form.Controls.Add($button4)
 $Form.Controls.Add($button5)
 $Form.Controls.Add($button6)
+$Form.Controls.Add($button9)
 $Form.Controls.Add($checkBox)
 $Form.Controls.Add($checkBox2)
 $Form.Controls.Add($AutoReboot)
