@@ -21,3 +21,6 @@ New UI in development, We expect the new UI will be in the new [Preview](https:/
 
 # **More Features**
 With the new UI you can also expect more features
+
+# **Docs**
+We will also make a Document of every features and how to use them, but this can take a while before is done. so don't expect the documents to be done this week
