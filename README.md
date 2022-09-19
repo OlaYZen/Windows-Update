@@ -15,3 +15,6 @@ To try or compare preview builds click [here](https://github.com/OlaYZen/Windows
 
 ## **WIKI**
 Check out the [Wiki](https://github.com/OlaYZen/Windows-Update/wiki), There could be some info you want to know
+
+## **NEW UI**
+New UI in development, We expect the new UI will be in the new [Preview](https://github.com/OlaYZen/Windows-Update/blob/Preview/Script%20PREVIEW.ps1) Build comming out later this week.
