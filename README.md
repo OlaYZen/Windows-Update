@@ -11,3 +11,6 @@ or Download and run Script.ps1
 To try or compare preview builds click [here](https://github.com/OlaYZen/Windows-Update/tree/Preview)
 ## **Credits**
 Me and only me :(
+
+## **WIKI**
+Check out the [Wiki](https://github.com/OlaYZen/Windows-Update/wiki), There could be some info you want to know
