@@ -39,25 +39,47 @@ function CheckBoxFunc {
             $button5.Visible = $true
             $button6.Visible = $false  
         }
-        $button5reboot
+}
+
+function CheckBoxFunc2 {
+    if ($checkBox2.Checked)
+        {
+            $button8.Visible = $true
+            $button1.Visible = $false
+        }
+    else
+        {
+            $button8.Visible = $false
+            $button1.Visible = $true
+        }
 }
 
 function GetWindowsUpdates {   
     (
-        Get-WindowsUpdate -AcceptAll -Install
+        Get-WindowsUpdate -AcceptAll -WindowsUpdate -ForceDownload
     )
     $button1.Visible = $false
+    $button8.Visible = $false
 }
+
+function GetWindowsUpdates2 {   
+    (
+        Get-WindowsUpdate -AcceptAll -MicrosoftUpdate -ForceDownload
+    )
+    $button1.Visible = $false
+    $button8.Visible = $false
+}
+
 function UpdateWindowsUpdatesnoReboot {
     (
-    Install-WindowsUpdate -Confirm -AcceptAll
+    Install-WindowsUpdate -Confirm -AcceptAll -ForceInstall
     )
     
 }
 
 function UpdateWindowsUpdateswithReboot {
     (
-        Install-WindowsUpdate -Confirm -AcceptAll -AutoReboot
+        Install-WindowsUpdate -Confirm -AcceptAll -AutoReboot -ForceInstall
     )
     
 }
@@ -91,6 +113,16 @@ $button1.Size = '95, 55'
 $button1.TabIndex = 0
 $button1.Text = "Get Windows Updates"
 $button1.Add_Click({GetWindowsUpdates})
+
+[System.Windows.Forms.Application]::EnableVisualStyles()
+$button8 = New-Object System.Windows.Forms.Button
+$button8.Location = '12, 5'
+$button8.Name = "Get Windows Updates"
+$button8.Size = '95, 55'
+$button8.Visible = $false
+$button8.TabIndex = 0
+$button8.Text = "Get Windows Updates"
+$button8.Add_Click({GetWindowsUpdates2})
 
 [System.Windows.Forms.Application]::EnableVisualStyles()
 $button5 = New-Object System.Windows.Forms.Button
@@ -148,10 +180,16 @@ $button4.Text = "Edit Winget Software"
 $button4.Add_Click({EditWinget})
 
 $checkBox = new-object System.Windows.Forms.checkbox
-$checkBox.Location = '12, 55'
-$checkBox.Size = '95, 55'
+$checkBox.Location = '12, 65'
+$checkBox.Size = '85, 15'
 $checkBox.Text = "AutoReboot"
 $checkBox.Add_Click({CheckBoxFunc})
+
+$checkBox2 = new-object System.Windows.Forms.checkbox
+$checkBox2.Location = '12, 65'
+$checkBox2.Size = '95, 55'
+$checkBox2.Text = "Microsoft Update"
+$checkBox2.Add_Click({CheckBoxFunc2})
 
 $AutoReboot = New-Object System.Windows.Forms.TextBox
 $AutoReboot.Location = '12, 175'
@@ -173,17 +211,18 @@ $VersionLabel.Location = '216, 90'
 #Preview Label
 
 $VersionLabel.Name = 'Versionlabel'
-$VersionLabel.Text = "Version 1.2.3 PREVIEW"
+$VersionLabel.Text = "Version 1.2.4 PREVIEW"
 $VersionLabel.Size = '490, 500'
 
 $Form = New-Object System.Windows.Forms.Form
 $Form.StartPosition = "CenterScreen"
 $Form.FormBorderStyle = [System.Windows.Forms.FormBorderStyle]::FixedDialog
-$Form.Name = "Form"
+$Form.Name = "mainForm"
 $Form.Text = "Windows and Winget Updates"
 $Form.MaximizeBox = $False
 $Form.ShowInTaskbar = $true
 $Form.Controls.Add($button1)
+$Form.Controls.Add($button8)
 $Form.Controls.Add($button2)
 $Form.Controls.Add($button3)
 $Form.Controls.Add($button7)
@@ -191,6 +230,7 @@ $Form.Controls.Add($button4)
 $Form.Controls.Add($button5)
 $Form.Controls.Add($button6)
 $Form.Controls.Add($checkBox)
+$Form.Controls.Add($checkBox2)
 $Form.Controls.Add($AutoReboot)
 $Form.Controls.Add($VersionLabel)
 $Form.Controls.Add($RichTextBoxDisplay)
