@@ -4,5 +4,6 @@ Open a [Elevated Windows Powershell Window](https://docs.microsoft.com/en-us/pow
 ```
 iwr -useb https://tinyurl.com/OlaYZenWUandWingetU | iex
 ```
+or Download and run Upgrader.ps1
 ## **Credits**
 Me and only me :(
