@@ -20,10 +20,14 @@ function installwingetjson
     )
     If (Test-Path -Path $PSScriptRoot"".\winget-export.json ) {
         $button7.Visible = $false
+        $button2.Visible = $true
+        $button4.Visible = $true
     }
     else
     {
         $button7.Visible = $true
+        $button2.Visible = $false
+        $button4.Visible = $false
     }
 }
 function CheckBoxFunc {
@@ -129,9 +133,9 @@ $button3.Add_Click({WingetUpgrade})
 
 [System.Windows.Forms.Application]::EnableVisualStyles()
 $button7 = New-Object System.Windows.Forms.Button
-$button7.Location = '122, 60'
+$button7.Location = '122, 5'
 $button7.Name = "Install Winget Json"
-$button7.Size = '95, 35'
+$button7.Size = '95, 95'
 $button7.TabIndex = 2
 $button7.Text = "Install Winget Json"
 $button7.Add_Click({installwingetjson})
@@ -196,10 +200,14 @@ $Form.Topmost = $false
 
 If (Test-Path -Path $PSScriptRoot"".\winget-export.json ) {
     $button7.Visible = $false
+    $button2.Visible = $true
+    $button4.Visible = $true
 }
 else
 {
     $button7.Visible = $true
+    $button2.Visible = $false
+    $button4.Visible = $false
 }
 
 
