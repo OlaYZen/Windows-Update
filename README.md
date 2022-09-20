@@ -12,6 +12,9 @@ iwr -useb https://tinyurl.com/OlaYZenWinUpdates | iex
 ```
 or Download and run Script.ps1
 
+## Website
+Visit our Website for blogs and other stuff: <br/>
+https://www.olayzen.lol/Windows-Update/
 
 ## Preview Builds
 To try or compare preview builds click [here](https://github.com/OlaYZen/Windows-Update/tree/Preview)
