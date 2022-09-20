@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<title>Gaveyo</title>
+<link rel="icon" href="favicon.ico">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.OpenButton {
+  position: absolute;
+  top: 23px;
+
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.top {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background-color: orange;
+   color: oran;
+   text-align: center;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: orange;
+  color: white;
+  text-align: center;
+}
+h3{
+  position: absolute;
+  left: auto;
+  top: 80px;
+  font-size: auto%;
+  font-size: 2400%;
+}
+P.blocktext {
+  margin-left: auto;
+  position: absolute;
+  margin-right: auto;
+  top: 80px;
+  width: 8em
+}
+.responsive{
+  position: absolute;
+  top: 180px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("HeroIMG.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+h4{
+
+  color: #818181;
+  font-size: 36px;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="">Home</a>
+    <a href="About.html">About</a>
+    <a href="#">Login</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Contact us</a>
+    <h4>GAMEYO / BEST GAME SELLER</h4>
+  </div>
+</div>
+
+</div>
+<div class="hero-image">
+  <div class="hero-text">
+  </div>
+</div>
+
+<div class="top">
+  <p>.</p>
+</div>
+
+<span class= "OpenButton" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;&nbsp;open</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+<h1 class="responsive" style="font-size:12vw;">GAMEYO</h1>
+
+</div>
+<div class="footer">
+  <p>GAMEYO / BEST GAME SELLER</p>
+
+
+</body>
+</html>
