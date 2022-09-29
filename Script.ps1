@@ -30,7 +30,6 @@ write-host "==========================================="
 write-host "                                           "
 write-host "                                           "
 write-host "============= made by OlaYZen ============="
-write-host "==================== WU ==================="
 write-host "                                           "
 
 
