@@ -30,7 +30,7 @@ write-host "==========================================="
 write-host "                                           "
 write-host "                                           "
 write-host "============= made by OlaYZen ============="
-write-host "================ PowerShell ==============="
+write-host "==================== WU ==================="
 
 
 
