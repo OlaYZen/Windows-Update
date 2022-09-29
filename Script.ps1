@@ -1,5 +1,39 @@
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 
+#========================================================
+#    Writes out OlaYZen's Name
+#========================================================
+
+write-host "                                           "
+write-host "==========================================="
+write-host "==========================================="
+write-host "                                           "
+write-host "YYYY             YYYYZZZZZZZZZZZZZZZZZZZZZ "
+write-host " Y::Y           Y::::::::::::::::::::::::Z "
+write-host "  Y::Y         Y::YYYZZZZZZZZZZZZZZZZZ:::Z "
+write-host "   Y::Y       Y::Y                 Z:::Z   "
+write-host "    Y:::Y   Y:::Y                 Z:::Z    "
+write-host "     Y:::Y Y:::Y                 Z:::Z     "
+write-host "      Y:::Y:::Y                 Z:::Z      "
+write-host "       Y:::::Y                Z:::Z        "
+write-host "        Y:::Y                Z:::Z         "
+write-host "        Y:::Y               Z:::Z          "
+write-host "        Y:::Y             Z:::Z            "
+write-host "        Y:::Y            Z:::Z             "
+write-host "        Y:::Y           Z:::Z              "
+write-host "        Y:::Y         Z:::ZZZZZZZZZZZZZZZZ "
+write-host "        Y:::Y        Z:::::::::::::::::::Z "
+write-host "        YYYYY        ZZZZZZZZZZZZZZZZZZZZZ "
+write-host "                                           "
+write-host "==========================================="
+write-host "==========================================="
+write-host "                                           "
+write-host "                                           "
+write-host "============= made by OlaYZen ============="
+write-host "================ PowerShell ==============="
+
+
+
 Start-Sleep -Milliseconds 500
 
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") 
