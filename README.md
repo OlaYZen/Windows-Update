@@ -8,7 +8,7 @@
 
 Open a [Elevated Windows Powershell Window](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/starting-windows-powershell?view=powershell-7.2#with-administrative-privileges-run-as-administrator), and type: 
 ```
-iwr -useb http://win.olayzen.lol/ | iex
+iwr -useb http://win.olayzen.com/ | iex
 ```
 or Download and run Script.ps1
 
